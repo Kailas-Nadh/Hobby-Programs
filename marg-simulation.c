@@ -1,3 +1,10 @@
+/*A program to simulate Margdeepthi application.
+	Margdeepthi is an application designed for the blind.
+	It helps the visually challenged in navigation.
+	Created by Kailas Nadh J
+	https://github.com/Kailas-Nadh
+The application will be released soon */
+
 #include<stdio.h>
 #include<string.h>
 #include<unistd.h>

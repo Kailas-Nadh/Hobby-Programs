@@ -1,3 +1,7 @@
+#This program returns the exact date and time at UTC and IST (+05:30 UTC) for a given input
+#The input should be the number of seconds past the Unix epoch
+#Unix epoch began on 01 January 1970, 00:00 UTC
+
 import time
 import calendar
 

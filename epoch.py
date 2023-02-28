@@ -4,5 +4,5 @@ import time
 # get the current time in seconds since the epoch
 seconds = time.time()
 
-print("Seconds since epoch =", seconds)	
+print("\nSeconds since epoch =", seconds)	
 

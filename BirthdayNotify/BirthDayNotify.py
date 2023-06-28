@@ -11,14 +11,12 @@ def input_Name():
         names.append(inp_name)
         file1.write("\n")
         file1.write(inp_name)
-        #file1.write(",")
 
         d1, m1, y1 = [int(x) for x in input("Enter first person's date(DD/MM/YYYY) : ").split('/')]
         inp_date = date(y1,m1,d1)
         dob.append(inp_date)
         file2.write("\n")
         file2.write(str(inp_date))
-        #file2.write(",")
         
 def input_DOB():
 
@@ -32,40 +30,42 @@ def input_DOB():
 
 def find_Bday():
 	day=str(date.today())
-	#print(day)
+	todayList=day.split("-")
 	with open("log.txt","r") as file3, open("date.txt","r") as file4:
 		names=file3.read().split("\n")
 		dob=file4.read().split("\n")
 		for i in range(len(names)):
-			if day==dob[i]:
+			dateList=dob[i].split("-")
+			if todayList[1]==dateList[1] and todayList[2]==dateList[2]:
 				print("It is " + names[i] + "'s birthday today")
 			#else:
 				#print("No bdays today")
 
     
 print("\n\n********************BIRTHDAY BOT********************")
+print("Created by: Anonymous\nCreated on: 28 June 2023\n\n")
 time.sleep(1)
 find_Bday()
-while True:
-    choice=input("\n1.Enter a birthday.\n2.List birthdays.\n3.Exit\n\nEnter your choice:\n\t>> ")
+keyPress=input("\nEnter y if you want to see the options...\n\t>> ")
+if keyPress=="y":
+	while True:
+    		choice=input("\n1.Enter a birthday.\n2.List birthdays.\n3.Exit\n\nEnter your choice:\n\t>> ")
 
-    if choice=="1":
-        input_Name()
+    		if choice=="1":
+        		input_Name()
     
-    elif choice=="2":
-        input_DOB()
+    		elif choice=="2":
+        		input_DOB()
 
-    elif choice=="3":
-        print("\nQuitting",end="",flush=True)
-        for i in range (0,3):
-        	print(".",end="",flush=True)
-        	time.sleep(1)
-        print("\n\n")
-        exit()
-    else:
-        print("Enter VALID choice...!!!")
+    		elif choice=="3":
+        		print("\nQuitting",end="",flush=True)
+        		for i in range (0,3):
+        			print(".",end="",flush=True)
+        			time.sleep(1)
+        		print("\n\n")
+        		exit()
+    		else:
+        		print("Enter VALID choice...!!!")
     
-#d1=date.today()
-#print (d1)
 
 

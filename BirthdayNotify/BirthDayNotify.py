@@ -65,7 +65,6 @@ while True:
     else:
         print("Enter VALID choice...!!!")
     
-#d1=date.today()
-#print (d1)
+
 
 
